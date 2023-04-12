@@ -1,0 +1,128 @@
+@media only screen and (max-width: 1100px) {
+    .divider {
+        display: none;
+    }
+
+    .divider-mobile {
+        display: flex !important;
+        margin: auto;
+        position: absolute;
+        bottom: 75px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media only screen and (max-width: 800px) {
+        .advice {
+            width: 100% !important;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: hsl(218, 23%, 16%);
+}
+
+header {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    /* position: relative; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ADVICE */
+
+.advice {
+    position: relative;
+    width: 47%;
+    height: auto;
+    background: hsl(217, 19%, 24%);
+    border-radius: 20px;
+}
+
+.advice .boite {
+    text-align: center;
+}
+
+.advice .boite .advice-number {
+    color: hsl(150, 100%, 66%);
+    text-transform: uppercase;
+    padding: 50px;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.advice .boite .advice-random {
+    color: hsl(193, 38%, 86%);
+    font-size: 25px;
+    height: auto;
+    padding: 0 50px 150px 50px;
+}
+
+/* DIVIDER AND  BTN */
+
+
+.divider-mobile {
+    display: none;
+}
+
+.advice .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.advice .btn .divider {
+    margin: auto;
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.advice .btn .btn-generator-advice {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    cursor: pointer;
+}
+
+.advice .btn .btn-generator-advice::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: hsl(150, 100%, 66%);
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.advice .btn .btn-generator-advice:hover::before{
+    box-shadow: 0px 0px 25px 1px hsl(150, 100%, 66%);
+}
